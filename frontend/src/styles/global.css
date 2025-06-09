@@ -1,0 +1,36 @@
+:root {
+  --primary: #ff6600;        /* Orange from logo */
+  --secondary: #1b1f3b;     /* Dark Blue for buttons */
+  --background: #ffffff;    /* White background */
+  --neutral: #f7f7f7;      /* Light gray for sections */
+  --accent: #ff8533;       /* Lighter orange for hover states */
+  --nav-bg: #ff6600;       /* Orange navigation background */
+  --text-dark: #333333;    /* Dark text color */
+  --text-light: #ffffff;   /* Light text color */
+  --border: #ff7519;       /* Slightly lighter orange for borders */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  color: var(--base);
+  margin: 2rem 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section {
+  padding: 2rem 0;
+}

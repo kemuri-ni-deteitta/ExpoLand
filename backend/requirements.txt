@@ -1,0 +1,35 @@
+# Django and REST framework
+Django==5.0.2
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# Database
+psycopg2-binary==2.9.9
+
+# Environment variables
+python-dotenv==1.0.1
+
+# WSGI server
+gunicorn==21.2.0
+
+# Image processing
+Pillow==10.2.0
+
+# API documentation
+drf-yasg==1.21.7
+
+# Security
+django-environ==0.11.2
+django-allauth==0.61.1
+
+# Utilities
+python-dateutil==2.8.2
+requests==2.31.0
+urllib3==2.2.0
+
+# Development
+black==24.1.1
+flake8==7.0.0
+isort==5.13.2
+pytest==8.0.0
+pytest-django==4.8.0 
