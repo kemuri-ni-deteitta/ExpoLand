@@ -11,24 +11,17 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<div>Главная</div>} />
-            <Route path="/portfolio" element={<div>Портфолио</div>} />
             
-            {/* Выставочные стенды */}
-            <Route path="/exhibition-stands" element={<div>Строительство выставочных стендов</div>} />
-            <Route path="/exhibition-stands/design" element={<div>Дизайн выставочных стендов</div>} />
-            <Route path="/exhibition-stands/construction" element={<div>Строительство выставочных стендов</div>} />
-            <Route path="/exhibition-stands/exclusive" element={<div>Эксклюзивные выставочные стенды</div>} />
+            {/* О компании */}
+            <Route path="/about" element={<div>О компании</div>} />
+            <Route path="/about/team" element={<div>Команда</div>} />
+            <Route path="/about/partners" element={<div>Клиенты и партнёры</div>} />
+            <Route path="/about/certificates" element={<div>Сертификаты и награды</div>} />
+            <Route path="/about/archive" element={<div>Архив</div>} />
             
-            {/* Наружная реклама */}
-            <Route path="/outdoor-advertising" element={<div>Наружная реклама</div>} />
-            <Route path="/outdoor-advertising/portfolio" element={<div>Портфолио наружной рекламы</div>} />
+            {/* Услуги */}
+            <Route path="/services" element={<div>Услуги</div>} />
             
-            {/* Дизайн интерьеров */}
-            <Route path="/interior-design" element={<div>Дизайн интерьеров</div>} />
-            <Route path="/interior-design/portfolio" element={<div>Портфолио дизайна интерьеров</div>} />
-            <Route path="/interior-design/store" element={<div>Интерьер магазина</div>} />
-            
-            <Route path="/partners" element={<div>Наши партнеры</div>} />
             <Route path="/news" element={<div>Новости</div>} />
             <Route path="/contacts" element={<div>Контакты</div>} />
             <Route path="/request" element={<div>Отправить заявку</div>} />
