@@ -29,6 +29,26 @@ export interface Certificate {
   is_active: boolean;
 }
 
+export interface Contact {
+  id: number;
+  title: string;
+  subtitle: string;
+  phone: string;
+  email: string;
+  address: string;
+  working_hours_weekdays: string;
+  working_hours_saturday: string;
+  working_hours_sunday: string;
+  map_latitude: number;
+  map_longitude: number;
+  map_zoom: number;
+  description: string;
+  whatsapp_link?: string;
+  telegram_link?: string;
+  vk_link?: string;
+  is_active: boolean;
+}
+
 export const fetchAboutUs = async (): Promise<AboutUs> => {
   const response = await axios.get('/api/about/');
   return response.data;
@@ -46,5 +66,27 @@ export const fetchTestimonials = async (): Promise<Testimonial[]> => {
 
 export const fetchCertificates = async (): Promise<Certificate[]> => {
   const response = await axios.get('/api/about/certificates/');
+  return response.data;
+};
+
+export const fetchContact = async (): Promise<Contact> => {
+  const response = await axios.get('/api/about/contacts/');
+  return response.data;
+};
+
+export interface RequestFormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  service_type: string;
+  subject: string;
+  message: string;
+  budget: string;
+  deadline: string;
+}
+
+export const submitRequest = async (requestData: RequestFormData): Promise<any> => {
+  const response = await axios.post('/api/about/requests/', requestData);
   return response.data;
 };

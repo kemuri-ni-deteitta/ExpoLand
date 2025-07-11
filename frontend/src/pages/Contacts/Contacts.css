@@ -1,0 +1,252 @@
+.contacts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  margin-top: 90px; /* Account for fixed navbar */
+}
+
+.contacts-loading,
+.contacts-error {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 1.2rem;
+  margin-top: 90px;
+}
+
+.contacts-error {
+  color: #e74c3c;
+}
+
+.contacts-loading {
+  color: #666;
+}
+
+.contacts-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contacts-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b1f3b;
+  margin-bottom: 15px;
+}
+
+.contacts-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+
+.contacts-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-section h2 {
+  color: #1b1f3b;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff6600;
+  padding-bottom: 10px;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item h3 {
+  color: #1b1f3b;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-item p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-link {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ff8533;
+  text-decoration: underline;
+}
+
+.working-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.working-hours p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  color: #fff;
+  background: #ff6600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background: #ff8533;
+  transform: translateY(-2px);
+}
+
+.map-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 110px; /* Account for navbar + some spacing */
+}
+
+.map-section h2 {
+  color: #1b1f3b;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff6600;
+  padding-bottom: 10px;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #ff6600;
+}
+
+.yandex-map {
+  width: 100%;
+  height: 400px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* Loading state for map */
+.yandex-map:empty::before {
+  content: "Загрузка карты...";
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .contacts-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .map-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-container {
+    padding: 20px 15px;
+  }
+  
+  .contacts-title {
+    font-size: 2rem;
+  }
+  
+  .contacts-content {
+    gap: 30px;
+  }
+  
+  .contact-section,
+  .map-section {
+    padding: 20px;
+  }
+  
+  .contact-section h2,
+  .map-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .social-link {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .yandex-map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-title {
+    font-size: 1.8rem;
+  }
+  
+  .contacts-subtitle {
+    font-size: 1rem;
+  }
+  
+  .contact-section,
+  .map-section {
+    padding: 15px;
+  }
+  
+  .yandex-map {
+    height: 250px;
+  }
+  
+  .contacts-content {
+    gap: 20px;
+  }
+} 

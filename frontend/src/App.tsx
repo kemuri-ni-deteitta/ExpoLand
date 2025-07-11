@@ -5,6 +5,8 @@ import About from './pages/About/About';
 import Partners from './pages/Partners/Partners';
 import Testimonials from './pages/Testimonials/Testimonials';
 import Certificates from './pages/Certificates/Certificates';
+import Contacts from './pages/Contacts/Contacts';
+import Request from './pages/Request/Request';
 
 function App() {
   return (
@@ -27,8 +29,8 @@ function App() {
     <Route path="/services" element={<div>Услуги</div>} />
     
     <Route path="/news" element={<div>Новости</div>} />
-    <Route path="/contacts" element={<div>Контакты</div>} />
-    <Route path="/request" element={<div>Отправить заявку</div>} />
+    <Route path="/contacts" element={<Contacts />} />
+    <Route path="/request" element={<Request />} />
     </Routes>
     </div>
     </div>
